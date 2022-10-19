@@ -1,0 +1,14 @@
+button{
+    width: 130px;
+    margin-bottom: 10px;
+}
+.btn-add{
+    background-color: rgb(233, 29, 29);
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.btn-add a{
+    color: #fff;
+}

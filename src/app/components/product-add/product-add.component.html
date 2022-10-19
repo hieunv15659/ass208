@@ -1,0 +1,44 @@
+<nz-table>
+    <tbody>
+        <div class="container">
+            <form #addForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="firstname" placeholder="Name.." [(ngModel)]="product.name"
+                            #name="ngModel" required minlength="7">
+                        <p *ngIf="name.errors?.['required']" style="color: red ;">* Not !</p>
+                        <p *ngIf="name.errors?.['minlength']" style="color: red ;">* must be longer than 7 characters !
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Price</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Price.." [(ngModel)]="product.price"
+                            #price="ngModel" required>
+                        <p *ngIf="price.errors?.['required']" style="color: red ;">* Not !</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Content</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"
+                            [(ngModel)]="product.subject" required>
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" [disabled]="!addForm.valid">
+                </div>
+            </form>
+        </div>
+    </tbody>
+</nz-table>
+<router-outlet></router-outlet>

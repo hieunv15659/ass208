@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style type="text/tailwindcss">
+  @layer utilities {
+    body {
+      @apply text-[#21243D];
+    }
+    .custom-container {
+      @apply max-w-5xl mx-auto px-5;
+    }
+    /* Banner */
+    .banner {
+      @apply py-10 md:py-20;
+    }
+    .banner-content {
+      @apply order-2 text-center md:order-1 md:col-span-2  md:text-left;
+    }
+    .banner-content__title {
+      @apply text-[44px] leading-[60px] font-bold;
+    }
+    .banner-content__desc {
+      @apply text-base my-5;
+    }
+    .banner-picture {
+      @apply order-1 md:order-2;
+    }
+    .banner-picture__thumb {
+      @apply rounded-full mx-auto md:ml-auto md:mr-0;
+    }
+    .btn {
+      @apply inline-block py-5 px-10 text-white rounded;
+    }
+    .btn-danger {
+      @apply bg-red-500;
+    }
+    /* Section */
+    .seciton-header {
+      @apply flex justify-between items-center py-5;
+    }
+    .seciton-header__title {
+      @apply text-[22px];
+    }
+    /* Recent-posst */
+    .recent-post {
+      @apply bg-[#EDF7FA] py-5;
+    }
+    .recent-post__item {
+      @apply bg-[#fff] p-5;
+    }
+    .recent-post__title {
+      @apply text-[26px] font-bold;
+    }
+    .recent-post__meta {
+      @apply flex items-center py-5 space-x-4;
+    }
+    /* Project */
+    .projects {
+    }
+    .project__item {
+      @apply border-b py-5;
+    }
+    .project__img {
+      @apply shadow-lg;
+    }
+    .project__thumbnail {
+      @apply rounded w-full;
+    }
+    .project__name {
+      @apply text-[30px] font-bold leading-[20px];
+    }
+    .project__createat {
+      @apply inline-block bg-black rounded-full text-white px-2;
+    }
+    .project__category {
+      @apply text-[#8695A4];
+    }
+    .project__meta {
+      @apply flex space-x-4 py-5;
+    }
+  }
+</style>
+<body>
+  <app-root></app-root>
+</body>
+</html>
